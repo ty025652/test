@@ -1,4 +1,66 @@
 @charset "UTF-8";
+.pc {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: #484a45;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 10px;
+  scroll-behavior: smooth;
+  letter-spacing: 0.02em;
+}
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  html {
+    font-size: 0.85vw;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 1.333vw;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+section.sec .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 6vw 8vw;
+}
+
+a {
+  cursor: pointer;
+}
+a:hover {
+  cursor: pointer;
+}
+
 body {
   background: #f4ecdf;
 }
@@ -9,6 +71,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 767px) {
+  #header {
+    width: 70%;
+  }
 }
 
 main {
@@ -70,19 +137,59 @@ main {
   font-size: 1.7rem;
   line-height: 1.5;
 }
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .personal p {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 767px) {
+  .personal p {
+    font-size: 2.8rem;
+  }
+}
 .personal p:nth-of-type(2) {
   border-bottom: 1px solid #484a45;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 1.9rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .personal p:nth-of-type(2) {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .personal p:nth-of-type(2) {
+    font-size: 3.4rem;
+  }
+}
 .personal .personal__name {
   font-size: 3.4rem;
   margin-bottom: 4rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .personal .personal__name {
+    font-size: 5.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .personal .personal__name {
+    font-size: 6.4rem;
+  }
+}
 .personal .personal__name span {
   font-size: 2.8rem;
   display: block;
+}
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .personal .personal__name span {
+    font-size: 3.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .personal .personal__name span {
+    font-size: 4.2rem;
+  }
 }
 
 .title {
@@ -97,6 +204,7 @@ main {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   animation: fade-up 0.65s forwards;
+  font-size: 10rem;
 }
 .title h2::after {
   content: "";
@@ -126,6 +234,11 @@ main {
   margin-bottom: 2.5rem;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 767px) {
+  .skills-and-experiences h3 {
+    font-size: 6.8rem;
+  }
+}
 .skills-and-experiences dl {
   margin-bottom: 4rem;
 }
@@ -133,6 +246,19 @@ main {
   border-bottom: 1.25px solid #484a45;
   padding-bottom: 0.85rem;
   margin-bottom: 1.65rem;
+}
+@media (max-width: 767px) {
+  .skills-and-experiences .container {
+    flex-direction: column;
+  }
+}
+.skills-and-experiences .title {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .skills-and-experiences .content {
+    width: 100%;
+  }
 }
 
 .skills__content {
@@ -154,6 +280,11 @@ main {
   font-weight: 600;
   color: #637865;
 }
+@media (max-width: 767px) {
+  .skills__content dt {
+    font-size: 3.4rem;
+  }
+}
 .skills__content dd li {
   display: grid;
   grid-template-columns: 0 1fr;
@@ -161,6 +292,11 @@ main {
   align-items: start;
   font-size: 2rem;
   line-height: 1.5em;
+}
+@media (max-width: 767px) {
+  .skills__content dd li {
+    font-size: 2.8rem;
+  }
 }
 .skills__content dd li::before {
   content: "‣";
@@ -191,10 +327,20 @@ main {
   color: #637865;
   font-weight: 600;
 }
+@media (max-width: 767px) {
+  .experiences__content dl dt {
+    font-size: 3.6rem;
+  }
+}
 .experiences__content dl dt span {
   font-size: 2.2rem;
   opacity: 0.8;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .experiences__content dl dt span {
+    font-size: 3.2rem;
+  }
 }
 .experiences__content dl dt span:nth-of-type(2) {
   font-size: 1.4rem;
@@ -205,6 +351,11 @@ main {
 }
 .experiences__content dl dd {
   font-size: 1.8rem;
+}
+@media (max-width: 767px) {
+  .experiences__content dl dd {
+    font-size: 2.8rem;
+  }
 }
 .experiences__content dl dd li {
   display: grid;
@@ -222,11 +373,21 @@ main {
   font-size: 2.4rem;
   color: #637865;
 }
+@media (max-width: 767px) {
+  .education dl dt {
+    font-size: 3.4rem;
+  }
+}
 .education dl dd {
   font-size: 2.2rem;
   opacity: 0.8;
   display: flex;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .education dl dd {
+    font-size: 3.2rem;
+  }
 }
 .education dl dd img {
   width: 3.5rem;
@@ -363,11 +524,26 @@ main {
 #portfolio .container {
   align-items: center;
 }
+@media (max-width: 767px) {
+  #portfolio .container {
+    flex-direction: column;
+  }
+}
 #portfolio .title {
   width: 30%;
 }
+@media (max-width: 767px) {
+  #portfolio .title {
+    width: 100%;
+  }
+}
 #portfolio .content {
-  width: 60%;
+  width: 60;
+}
+@media (max-width: 767px) {
+  #portfolio .content {
+    width: 100%;
+  }
 }
 #portfolio .slider-nav {
   margin-top: 10rem;
@@ -392,10 +568,20 @@ main {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #637865;
 }
+@media (max-width: 767px) {
+  .slider-item-name {
+    font-size: 4rem;
+  }
+}
 
 .slider-des-name {
   font-size: 1.8rem;
   line-height: 2;
+}
+@media (max-width: 767px) {
+  .slider-des-name {
+    font-size: 3rem;
+  }
 }
 
 #contact .title p {
@@ -485,7 +671,7 @@ body {
 .circle-container {
   width: 8.5rem;
   height: 8.5rem;
-  border: 2px solid #484a45;
+  border: 2px solid #1a1818;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -494,9 +680,16 @@ body {
   justify-content: center;
   transition: 0.25s;
 }
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  .circle-container {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+}
 
 #curved-text {
   animation: rotateText linear 100s infinite;
+  color: #1a1818;
 }
 
 @keyframes rotateText {
@@ -514,7 +707,7 @@ body {
   justify-content: center;
   right: 5%;
   top: 5%;
-  z-index: 1;
+  z-index: 1000;
 }
 .menu:hover .circle-container {
   transform: scale(1.1);
@@ -542,67 +735,10 @@ h1 {
   color: #637865;
   z-index: -1;
 }
-
-.pc {
-  display: block !important;
-}
-
-.sp {
-  display: none !important;
-}
-
 @media (max-width: 767px) {
-  .pc {
-    display: none !important;
+  h1 {
+    font-size: 7rem;
   }
-  .sp {
-    display: block !important;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-  color: #484a45;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 10px;
-  scroll-behavior: smooth;
-  letter-spacing: 0.02em;
-}
-@media only screen and (min-width: 768px) and (max-width: 1300px) {
-  html {
-    font-size: 0.79vw;
-  }
-}
-@media (max-width: 767px) {
-  html {
-    font-size: 1.333vw;
-  }
-}
-
-img {
-  width: 100%;
-}
-
-section.sec .container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 6vw 8vw;
-}
-
-a {
-  cursor: pointer;
-}
-a:hover {
-  cursor: pointer;
 }
 
 #splash {
