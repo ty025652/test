@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link rel="stylesheet" href="./app/SASS/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="circle-container">
+        <p id="curved-text">MENU MENU MENU MENU MENU MENU</p>
+      </div>
+    </div>
+    <div class="loading"></div>
+    <div class="nav-side-bar">
+      <div class="nav-left">
+        <div class="nav-left-item">
+          <a href="../skills-and-experiences.html" class="nav-left-link"
+            >Skills&<br />Experiences</a
+          >
+        </div>
+        <div class="nav-line"></div>
+      </div>
+
+      <div class="nav-right">
+        <div class="nav-line"></div>
+        <div class="nav-right-item">
+          <a href="../contact.html" class="nav-right-link">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main" class="main">
+      <section id="portfolio" class="sec portfolio">
+        <div class="container">
+          <div class="title">
+            <h2>Portfolio</h2>
+            <div class="slider-for">
+              <div>
+                <p class="slider-item-name">大學招生資訊網</p>
+                <ul class="slider-des-name">
+                  <li>- UI/UX設計</li>
+                  <li>- RWD網站支援電腦、平板、手機</li>
+                  <li>- 熟悉使用CSS Grid / CSS Flexbox</li>
+                  <li>- DOM控制HTML / CSS</li>
+                  <li>- 使用npm套件splide製作循環滾動式幻燈片</li>
+                  <li>- 使用AOS創造頁面滾動視差動畫效果</li>
+                </ul>
+              </div>
+              <div>
+                <p class="slider-item-name">家具DM網站</p>
+                <ul class="slider-des-name">
+                  <li>- RWD網站支援電腦、平板、手機</li>
+                  <li>- 熟悉使用CSS Grid / CSS Flexbox</li>
+                  <li>- DOM控制HTML / CSS</li>
+                  <li>- 手刻CSS選單動畫</li>
+                  <li>- 內嵌Google map</li>
+                  <li>- 利用Express創建路由</li>
+                </ul>
+              </div>
+              <div>
+                <p class="slider-item-name">簡單音樂播放器</p>
+                <ul class="slider-des-name">
+                  <li>- UI/UX設計</li>
+                  <li>- RWD網站支援電腦、平板、手機</li>
+                  <li>- CSS選單動畫效果</li>
+                  <li>- 純JS寫播放器控制效果</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="slider-nav">
+              <div>
+                <img src="./app/images/school-web-desktop.png" alt="" />
+              </div>
+              <div>
+                <img src="./app/images/furniture-web-desktop.png" alt="" />
+              </div>
+              <div>
+                <img src="./app/images/music-player-desktop.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <nav id="nav" class="nav">
+      <ul class="nav__lists">
+        <a href="/"><li class="nav_list">Home</li></a>
+        <a href="./about.html"><li class="nav_list">About</li></a>
+        <a href="./skills-and-experiences.html">
+          <li class="nav_list">Experiences</li></a
+        >
+        <a href="./portfolio.html"> <li class="nav_list">Portfolio</li></a>
+        <a href="./contact.html"> <li class="nav_list">Contact</li></a>
+      </ul>
+    </nav>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(".slider-for").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".slider-nav",
+      });
+      $(".slider-nav").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: ".slider-for",
+        dots: true,
+        focusOnSelect: true,
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
+    <script src="./app/JavaScript/curved-text.js"></script>
+  </body>
+</html>
