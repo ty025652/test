@@ -26,7 +26,7 @@ menu.addEventListener("click", function () {
   menuOpen = true
   }
   else{
-    nav.style.top = "-100%";
+    nav.style.top = "-120%";
     curvedText.style.display = "flex";
     menuOpen = false
   }
@@ -42,7 +42,7 @@ menuSp.addEventListener("click", function () {
   menuOpen = true
   }
   else{
-    navSp.style.top = "-100%";
+    navSp.style.top = "-120%";
     curvedTextSp.style.display = "flex";
     mainly.style.overflowY = 'scroll';
     menuOpen = false
@@ -58,7 +58,7 @@ anchorsSp.forEach(anchorSp=>{
       menuOpen = true
       }
       else{
-        navSp.style.top = "-100%";
+        navSp.style.top = "-120%";
         curvedTextSp.style.display = "flex";
         mainly.style.overflowY = 'scroll';
         menuOpen = false

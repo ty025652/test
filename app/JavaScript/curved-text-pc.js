@@ -22,7 +22,7 @@ menu.addEventListener("click", function () {
   menuOpen = true
   }
   else{
-    nav.style.top = "-100%";
+    nav.style.top = "-120%";
     curvedText.style.display = "flex";
     body.style.overflowY = 'scroll'
     menuOpen = false
