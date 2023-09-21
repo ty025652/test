@@ -86,20 +86,6 @@ main
             
 
     .personal
-        // &__photo
-        //     display: block
-        //     margin: 0 auto
-        //     width: 50%
-        //     height: auto
-        //     aspect-ratio: 1/1
-        //     background-image: url(../images/head-shot.jpg)
-        //     background-repeat: no-repeat
-        //     background-position: top center
-        //     background-size: cover
-        //     border-radius: 50%
-        //     box-shadow: rgba(68, 68, 78, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px
-        //     margin-bottom: 3rem
-        
         &__name
             font-size: 3.4rem
             margin-bottom: 4rem
@@ -475,6 +461,7 @@ body
     position: relative
     height: 100vh
     &.mainly
+        position: relative
         @include sp
             height: auto
             overflow-y: scroll 
@@ -488,12 +475,15 @@ body
     animation: loading 0.75s  forwards
     z-index: 998
     bottom: 0
+    
 
-@keyframes loading
-    0%
-        height: 100%
-    100%
-        height: 0
+.mainly
+    .loading
+        animation: loading 0.75s  forwards 1.5s
+        @include sp
+            animation: loading 2s  forwards 1.5s
+
+
 
 
 @keyframes fade-up
@@ -545,6 +535,7 @@ body
     @include sp
         position: fixed
     &:hover
+        cursor: pointer
         .circle-container 
             transform: scale(1.1)
 
@@ -584,8 +575,8 @@ h1
         
 .sp
     &>section
-        margin-bottom: 4srem
-
+        margin-bottom: 4rem
+    
 
 
 #about
@@ -652,3 +643,63 @@ h1
         display: block
         color: $main-color
 
+.loading__start
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: $main-color
+    content: '123'
+    z-index: 1000
+    animation: fade-out 1.5s forwards
+    
+
+.loading-flip
+    width: 100px    
+    height: 100px
+    background:  $text-color
+    margin: 0 auto
+    animation: flip 8s infinite
+    border-radius: 999px
+
+.loader
+    margin: 0 auto
+    text-align: center
+    width: 100%
+    min-height: 100%
+    display: table-cell
+    vertical-align: middle
+    opacity: 0.4
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+
+@keyframes flip
+    0%
+        transform: rotateX(0) rotateY(0)
+    20%,25%
+        transform: rotateX(0) rotateY(720deg)
+    45%,50%
+        transform: rotateX(720deg) rotateY(720deg)
+    70%,75%
+        transform: rotateX(720deg) rotateY(0)
+    95%,100%
+        transform: rotateX(0) rotateY(0)
+
+@keyframes loading
+    0%
+        height: 100%
+    100%
+        height: 0
+
+@keyframes fade-out
+    0%
+        opacity: 1
+        pointer-events: initial
+    100%
+        opacity: 0
+        pointer-events: none
+        
