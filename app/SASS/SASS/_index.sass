@@ -1,0 +1,705 @@
+body
+    background: $bg-color
+   
+
+
+#header
+    width: 40%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    animation: fade-up 0.75s forwards
+    @include sp
+        width: 70%
+
+main
+    position: relative
+
+#nav
+    font-size: 8rem
+    position: absolute
+    top: -120%
+    right: 0
+    transition: 0.75s 
+    background: $text-color
+    width: 100%
+    height: 100vh
+    @include sp
+        position: fixed
+        z-index: 999
+    .nav
+        &__lists
+            width: 80%
+            margin: 0 auto
+            margin-top: 5rem
+            li
+                font-weight: 600
+                position: relative
+                letter-spacing: 0.1em
+                transition: 0.5s
+                color: $white
+                font-family: 'Gloock', serif
+                margin-bottom: 2rem
+                @include sp
+                    margin-bottom: 5rem
+                &::before  
+                    content: ""
+                    display: block
+                    position: absolute
+                    width: 0
+                    height: 1px
+                    background: $link-color
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%)
+                    transition: 0.5s
+                    z-index: 1
+                &:hover
+                    color: $link-color
+                    &::before
+                        width: 100%
+                        
+
+#home
+    .container
+        display: flex
+        align-items: flex-end
+        
+.personal
+    p
+        font-size: 1.7rem
+        line-height: 1.5
+        @include laptop
+            font-size: 2.2rem
+        @include sp
+                font-size: 2.8rem
+        &:nth-of-type(2)
+            border-bottom: 1px solid $text-color
+            padding-bottom: 0.5rem
+            margin-bottom: 0.5rem
+            font-size: 1.7rem
+            @include laptop
+                font-size: 2.6rem
+            @include sp
+                font-size: 3.2rem
+            
+
+    .personal
+        &__name
+            font-size: 3.4rem
+            margin-bottom: 4rem
+            @include laptop
+                font-size: 5.4rem
+            @include sp
+                font-size: 6.4rem
+            span
+                font-size: 2.8rem
+                display: block
+                @include laptop
+                    font-size: 3.8rem
+                @include sp
+                    font-size: 4.2rem
+
+
+
+.title
+    width: 45%
+    h2
+        display: inline-block
+        font-size: 8.5rem
+        position: relative
+        color: $main-color
+        margin-bottom: 3.5rem
+        font-family: 'Gloock', serif
+        font-weight: 600
+        animation: fade-up 0.75s forwards
+        letter-spacing: 0.05em
+        @include sp
+        font-size: 10rem
+        &::after    
+            content: ""
+            display: block
+            position: absolute
+            width: 8rem
+            height: auto
+            aspect-ratio: 1/1
+            background: $link-color
+            border-radius: 999px
+            z-index: -1
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+    span
+        font-size: 3.5rem
+        display: block
+
+        
+.content
+    width: 50%
+    
+.skills-and-experiences
+    h3
+        font-size: 3.8rem
+        margin-bottom: 2.5rem
+        @include sp
+            font-size: 6.8rem
+    dl
+        margin-bottom: 4rem
+        dt
+            border-bottom: 1.25px solid $text-color
+            padding-bottom: 0.85rem
+            margin-bottom: 1.65rem
+    .container
+        @include sp
+            flex-direction: column
+    .title
+        width: 100%
+    .content
+        @include sp
+            width: 100%
+
+.skills__content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-direction: row
+    flex-wrap: wrap
+    dl
+        width: 50%
+        &:nth-of-type(1)
+            margin-bottom: 3.5rem
+    dt 
+        font-size: 2.4rem
+        width: 90%
+        font-weight: 600
+        color: $main-color
+        @include sp
+            font-size: 3.4rem
+    dd
+        li
+            display: grid
+            grid-template-columns: 0 1fr
+            grid-gap: 1.2em
+            align-items: start
+            font-size: 2rem
+            line-height: 1.5em
+            @include sp
+                font-size: 2.8rem
+            &::before 
+                content: "‣"
+                font-size: 1.4em
+            span
+                display: contents
+                color: $main-color
+                opacity: 0.6
+                font-size: 0.8em
+
+.experiences
+    display: flex
+    flex-direction: column
+
+.experiences__content
+    display: flex
+    justify-content: center
+    flex-direction: column
+    dl
+        font-size: 1.6rem
+        dt
+            font-size: 2.6rem
+            color: $main-color
+            font-weight: 600
+            @include sp
+                font-size: 3.6rem
+            span
+                font-size: 2.2rem
+                opacity: 0.8
+                font-weight: 500
+                @include sp
+                    font-size: 3.2rem
+                &:nth-of-type(2)
+                    font-size: 1.4rem
+                    opacity: 0.6
+                img
+                    width: 10rem
+        dd
+            font-size: 1.8rem
+            @include sp
+                font-size: 2.8rem
+            li
+                display: grid
+                grid-template-columns: 0 1fr
+                grid-gap: 1.2em
+                align-items: start
+                line-height: 1.65em
+                &::before 
+                    content: "‣"
+                    font-size: 1.4em
+            
+
+.education
+    dl
+        dt
+            font-size: 2.4rem
+            color: $main-color
+            @include sp
+                font-size: 3.4rem
+        dd
+            font-size: 2.2rem
+            opacity: 0.8
+            display: flex
+            align-items: center
+            @include sp
+                font-size: 3.2rem
+            img
+                width: 3.5rem
+                margin-right: 2rem
+            span
+                display: inline
+                font-size: 1.4rem
+                opacity: 0.6
+                margin-left: 2rem
+
+
+
+
+.dot 
+    width: 1rem
+    height: 1rem
+    background: black
+    border-radius: 50%
+    position: absolute
+    pointer-events: none
+    border: 1px solid black
+    
+.nav-side-bar
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100vh
+    position: fixed  
+    z-index: 1000
+
+.nav-left 
+    flex-direction: column
+    align-items: center
+    display: flex
+    &-link 
+        color: #1a1818
+        text-align: center
+        letter-spacing: 5px
+        text-transform: uppercase
+        border: 0 solid #000
+        font-size: 10px
+        font-weight: 500
+        text-decoration: none
+        transition: opacity .3s
+        display: block
+        writing-mode: vertical-rl
+        text-orientation: mixed
+        margin-bottom: 3rem
+        padding: 3vw 2vw 0 2vw
+        transition: 0.25s
+    &:hover
+        cursor: pointer
+        .nav-left-link
+            transform: scale(1.1)
+        .nav-line
+            transform: translateY(-1rem)
+    .nav-line
+        width: 1px
+        height: 12rem
+        background: black
+        position: relative
+        transition: 0.25s
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            background: black
+            height: 4rem
+            width: 1px
+            top: -0.6rem
+            left: 1.4rem
+            transform: rotate(-45deg) 
+
+.nav-right
+    flex-direction: column
+    align-items: center
+    display: flex
+    
+    &:hover
+        cursor: pointer
+        .nav-right-link
+            transform: scale(1.1)
+        .nav-line
+            transform: translateY(1rem)
+    &-link 
+        color: #1a1818
+        text-align: center
+        letter-spacing: 5px
+        text-transform: uppercase
+        border: 0 solid #000
+        font-size: 10px
+        font-weight: 500
+        text-decoration: none
+        transition: opacity .3s
+        display: block
+        writing-mode: vertical-rl
+        text-orientation: mixed
+        padding: 0vw 2vw 3vw 2vw
+        transition: 0.25s
+    .nav-line
+        margin-bottom: 3rem
+        width: 1px
+        height: 12rem
+        background: black
+        position: relative
+        transition: 0.25s
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            background: black
+            height: 4rem
+            width: 1px
+            bottom: -0.6rem
+            left: 1.4rem
+            transform: rotate(45deg) 
+      
+#portfolio
+    .container
+        align-items: center
+        @include sp
+            flex-direction: column
+    .title
+        width: 40%
+        @include sp
+            width: 100%
+    .content
+        width: 60
+        @include sp
+            width: 100%
+    .slider-nav
+        margin-top: 10rem
+        .slick-next:before, .slick-prev:before
+            color: $main-color
+            font-size: 3rem
+        .slick-dots li button:before
+            color: $main-color
+        .slick-prev
+            left: -4rem
+        .slick-next
+            right: -3rem
+            
+.slider-item-name
+    font-size: 2.8rem
+    padding-bottom: 1.5rem
+    margin-bottom: 1.5rem
+    border-bottom: 1px solid $main-color
+    @include sp
+        font-size: 4rem
+.slider-des-name
+    font-size: 1.8rem
+    line-height: 2
+    @include sp
+        font-size: 3rem
+    
+        
+#contact
+    .title
+        width: 60%
+        p
+            font-size: 1.7rem
+            @include sp
+                font-size: 2.8rem
+        &>p
+            &:last-of-type
+                margin-bottom: 2rem
+    .container
+        height: 100vh
+    .contact
+        align-self: flex-end
+        &__icons
+            display: flex
+            align-items: center
+            a
+                font-size: 3rem
+                margin-right: 2rem
+                
+                &:hover
+                    p
+                        &::after
+                            width: 100%
+            p
+                font-size: 2rem
+                font-weight: 600
+                margin-left: 0.5rem
+                position: relative
+                font-family: 'Montserrat', sans-serif
+                @include sp
+                    font-size: 3rem
+                &::after
+                    content: ''
+                    display: inline-block
+                    position: absolute
+                    width: 0%
+                    height: 1px
+                    background: $main-color
+                    bottom: -0.25rem
+                    left: 0
+                    transition: 0.5s
+            i
+                display: flex
+                align-items: center
+    .content
+        align-self: flex-end
+        text-align: right
+        letter-spacing: 0.2em
+
+body
+    position: relative
+    height: 100vh
+    &.mainly
+        position: relative
+        @include sp
+            height: auto
+            overflow-y: scroll 
+            overflow-x: hidden 
+       
+.loading
+    width: 100%
+    height: 100%
+    position: absolute
+    background: $text-color
+    animation: loading 0.75s  forwards
+    z-index: 998
+    bottom: 0
+    
+
+.mainly
+    .loading
+        animation: loading 0.75s  forwards 1.5s
+        @include sp
+            animation: loading 2s  forwards 1.5s
+
+
+
+
+@keyframes fade-up
+    0%
+        opacity: 0
+        transform: translateY(1.5rem)
+    100%
+        opacity: 1
+        transform: translateY(0rem)
+    
+.circle-container 
+    width: 8rem 
+    height: 8rem
+    border: 2px solid #1a1818
+    border-radius: 50% 
+    position: relative
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: 0.25s
+    @include sp
+        width: 10rem
+        height: 10rem
+
+
+
+#curved-text
+    animation: rotateText linear 100s infinite
+    color: #1a1818
+    @include sp
+        font-size: 1rem
+
+@keyframes rotateText 
+    0% 
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(360deg)
+
+
+.menu
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    right: 5%
+    top: 5%
+    z-index: 1000
+    @include sp
+        position: fixed
+    &:hover
+        cursor: pointer
+        .circle-container 
+            transform: scale(1.1)
+
+.bg-circle
+    background: $main-color
+    width: 100%
+    height: 100%
+    border-radius: 999px
+    position: absolute
+    right: -40%
+    z-index: -1
+    @include sp
+        width: 50rem
+        height: 50rem
+        right: 0
+    
+
+h1
+    font-size: 8rem
+    font-family: 'Gloock', serif
+    position: absolute
+    right: 0
+    bottom: 8%
+    width: 50%
+    line-height: 1.1
+    mix-blend-mode: multiply
+    color: $main-color
+    z-index: -1
+    letter-spacing: 0.05em
+    @include sp
+        font-size: 7rem
+        bottom: initial
+        top: 20%
+        position: relative
+        margin: 0 0 0 auto
+        display: block
+        
+.sp
+    &>section
+        margin-bottom: 4rem
+    
+
+
+#about
+    .pg
+        margin-bottom: 2.5rem
+    .container
+        flex-direction: column
+    .content
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        @include sp
+            flex-direction: column
+        &>div
+            width: 70%
+            @include sp
+                width: 90%
+                margin: 0 auto
+        h3
+            display: inline-block
+            font-size: 3rem
+            border-bottom: 1.5px solid $main-color
+            padding: 0.25rem
+            margin-bottom: 0.75rem
+            @include sp
+                font-size: 3.4rem
+        p
+            font-size: 1.8rem
+            line-height: 1.7
+            @include sp
+                font-size: 2.8rem
+        p.mark
+            display: flex
+            align-items: flex-start
+            margin-bottom: 0.5rem
+            @include sp
+                margin-bottom: 1.5rem
+            &::before
+                content: '‣'
+                font-size: 3rem
+                line-height: 1
+                margin-right: 1rem
+                @include sp
+                    font-size: 5rem
+            b
+                font-size: 2.2rem
+                @include sp
+                    font-size: 3rem
+
+.quote
+    font-size: 8rem
+    font-family: 'Gloock', serif
+    writing-mode: vertical-lr
+    opacity: 0.2
+    letter-spacing: 0.25em
+    color: $main-color
+    @include sp
+        writing-mode: initial
+        font-size: 6.5rem
+        letter-spacing: 0.1em
+        width: 90%
+    span
+        display: block
+        color: $main-color
+
+.loading__start
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: $main-color
+    content: '123'
+    z-index: 1000
+    animation: fade-out 1.5s forwards
+    
+
+.loading-flip
+    width: 100px    
+    height: 100px
+    background:  $text-color
+    margin: 0 auto
+    animation: flip 8s infinite
+    border-radius: 999px
+
+.loader
+    margin: 0 auto
+    text-align: center
+    width: 100%
+    min-height: 100%
+    display: table-cell
+    vertical-align: middle
+    opacity: 0.4
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+
+@keyframes flip
+    0%
+        transform: rotateX(0) rotateY(0)
+    20%,25%
+        transform: rotateX(0) rotateY(720deg)
+    45%,50%
+        transform: rotateX(720deg) rotateY(720deg)
+    70%,75%
+        transform: rotateX(720deg) rotateY(0)
+    95%,100%
+        transform: rotateX(0) rotateY(0)
+
+@keyframes loading
+    0%
+        height: 100%
+    100%
+        height: 0
+
+@keyframes fade-out
+    0%
+        opacity: 1
+        pointer-events: initial
+    100%
+        opacity: 0
+        pointer-events: none
+        

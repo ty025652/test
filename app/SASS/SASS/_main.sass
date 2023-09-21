@@ -1,0 +1,67 @@
+@charset "utf-8"
+
+@mixin laptop 
+    @media only screen and (min-width: 768px) and (max-width: 1300px) 
+        @content
+    
+@mixin sp
+    @media(max-width: 767px) 
+        @content
+
+.pc 
+    display: block !important
+
+.sp 
+    display: none !important
+
+@include sp
+    .pc 
+        display: none !important
+    
+    .sp 
+        display: block !important
+
+*
+    margin: 0
+    padding: 0
+    text-decoration: none
+    list-style: none
+    box-sizing: border-box
+    color: $text-color
+
+
+html
+    font-family: "Montserrat", sans-serif
+    font-weight: 500
+    font-style: normal
+    font-size: 10px
+    scroll-behavior: smooth
+    letter-spacing: 0.02em
+    @include laptop
+        font-size: 0.85vw
+    @include sp
+        font-size: 1.333vw
+
+img
+    width: 100%
+
+section.sec
+    .container
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        padding: 6vw 8vw
+        
+    
+a
+    cursor: pointer
+    &:hover
+        cursor: pointer
+    
+
+
+
+            
+            
+
+
