@@ -1,0 +1,269 @@
+@import 'variables'
+@import 'globals'
+@import 'animation'
+@import 'slider'
+
+//menu and navbar
+
+#menu
+    position: fixed
+    top: 5%
+    right: 5%
+    z-index: 999
+    animation: circle_rotate 12s linear infinite
+    border-radius: 999px
+    width: 6.5rem
+    height: 6.5rem
+    background: $color-main
+    display: flex
+    align-items: center
+    justify-content: center
+    @include sp
+        width: 7.5rem
+        height: 7.5rem
+    &:hover
+        cursor: pointer
+    span
+        color: $color-white
+
+#nav
+    opacity: 0
+    pointer-events: none
+    width: 100vw
+    height: 100vh
+    background: $color-background
+    position: fixed
+    z-index: 2
+    transition: 0.5s
+    &.nav--open
+        opacity: 1
+        pointer-events: initial
+
+    ul
+        padding: 10rem
+        @include sp
+            padding: 20rem 10rem
+        li
+            margin-bottom: 1rem
+            @include sp
+                margin-bottom: 2.5rem
+            a
+                font-size: 6rem
+                font-family: $main-font
+                color: $color-text
+                display: flex
+                align-items: center
+                @include sp
+                    font-size: 7.2rem
+                &::before
+                    content: ''
+                    width: 0.5rem
+                    height: 4rem
+                    background: $color-text
+                    display: inline-block
+                    margin-right: 2rem
+
+//home page
+
+.home
+    position: relative
+    &__text
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        z-index: 1
+        color: $color-white
+        width: 75%
+        margin: 0 auto
+        span
+            display: inline-block
+        h1
+            font-size: 6rem
+            text-align: center
+            @include sp
+                font-size: 12rem
+                margin-bottom: 2rem
+        p
+            font-size: 2.5rem
+            text-align: center
+            color: $color-white
+            @include sp
+                font-size: 3.5rem
+
+//parallax images
+
+.parallax__01
+    background: url('../images/parallax_img_01.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100vw
+    height: 20rem
+
+.parallax__02
+    background: url('../images/parallax_img_01.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100vw
+    height: 40rem
+    margin-bottom: 8rem
+
+//about section
+
+.about
+    background: #fff
+    &__text
+        display: flex
+        justify-content: space-between
+        @include sp
+            flex-direction: column
+        h2
+            width: 35%
+            @include sp
+                width: 100%
+                margin-bottom: 2.5rem
+        p
+            font-size: 2.2rem
+            line-height: 1.35
+            width: 45%
+            @include sp
+                font-size: 3.2rem
+                width: 100%
+
+//foods section
+
+.foods
+    &__text
+        h2
+            font-size: 4.5rem
+            text-align: center
+            padding-bottom: 2rem
+            @include sp
+                font-size: 6rem
+        p
+            font-size: 1.8rem
+            line-height: 1.35
+            width: 80%
+            text-align: center
+            margin: 0 auto
+            @include sp
+                font-size: 3.2rem
+                width: 100%
+.foods__container
+    background: $color-background
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 6rem 0 4rem 0
+    h3
+        font-size: 3.8rem
+        color: $color-text
+        padding-bottom: 1.5rem
+        @include sp
+            font-size: 5rem
+    p
+        font-size: 1.8rem
+        text-align: center
+        width: 60%
+        padding-bottom: 8rem
+        line-height: 1.35
+        @include sp
+            font-size: 3rem
+            width: 80%
+
+//location section
+
+.location
+    padding: 8rem 0
+    svg
+        padding-right: 1.5rem
+    &__container
+        display: flex
+        justify-content: flex-start
+        padding-bottom: 4rem
+        @include sp
+            flex-direction: column
+    &__text
+        h2
+            margin-bottom: 3rem
+    &__img
+        width: 40vw
+        @include sp
+            width: 100%
+    &__info
+        ul
+            padding: 3rem
+            li
+                font-size: 2rem
+                padding-bottom: 1rem
+                @include sp
+                    font-size: 2.8rem
+                    padding-bottom: 2rem
+                a
+                    color: $color-text
+    &__map
+        margin-left: 10%
+        @include sp
+            margin: 0
+            width: 100%
+            height: 100%
+    &__rules
+        background: $color-background
+        padding: 5rem
+        width: 40vw
+        margin: 0 auto
+        @include sp
+            width: 70%
+        h3
+            font-size: 3.5rem
+            padding-bottom: 3rem
+            @include sp
+                font-size: 5rem
+        ul
+            padding-bottom: 2rem
+            li
+                font-size: 2.2rem
+                padding-bottom: 2rem
+                @include sp
+                    font-size: 2.8rem
+        p
+            font-size: 1.6rem
+            @include sp
+                font-size: 2.2rem
+
+//footer section
+.footer
+    background: $color-main
+    width: 100%
+    padding: 4rem 0
+    font-size: 1.6rem
+    @include sp
+        font-size: 2.1rem
+    a
+        color: $color-text
+    &__links
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 60%
+        margin: 0 auto
+        padding-bottom: 4rem
+        @include sp
+            width: 80%
+            flex-direction: column
+            align-items: flex-start
+    &__link
+        margin-bottom: 1.25rem
+        @include sp
+            margin-bottom: 1.75rem
+        svg
+            padding-right: 1.5rem
+    small
+        text-align: center
+        margin: 0 auto
+        display: block
+        @include sp
+            width: 80%
+            text-align: left

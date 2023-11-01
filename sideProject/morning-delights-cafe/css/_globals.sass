@@ -1,0 +1,78 @@
+@mixin laptop
+    @media only screen and (min-width: 768px) and (max-width: 1300px)
+        @content
+
+@mixin sp
+    @media(max-width: 767px)
+        @content
+
+.pc
+    display: block !important
+
+.sp
+    display: none !important
+
+@include sp
+    .pc
+        display: none !important
+
+    .sp
+        display: block !important
+
+h1,h2
+    font-family: $main-font
+    letter-spacing: initial
+p
+    color: $color-text
+
+img
+    width: 100%
+
+*
+    margin: 0
+    padding: 0
+    border: 0
+    list-style: none
+    text-decoration: none
+    box-sizing: border-box
+    letter-spacing: 0.05em
+
+html
+    font-family: 'Times', serif
+    font-size: 10px
+    font-weight: 500
+    letter-spacing: 0.05em
+    color: $color-text
+    @include laptop
+        font-size: 0.79vw
+    @include sp
+        font-size: 1.333vw
+span
+    display: inline-block
+a
+    display: block
+    transition: 0.5s
+    &:hover
+        opacity: 0.6
+
+.w80
+    max-width: 120rem
+    width: 80%
+    margin: 0 auto
+    padding: 10rem 0
+
+.title__sub
+    font-size: 4.2rem
+    color: $color-main
+    @include sp
+        font-size: 6rem
+    &::before
+        content: ''
+        width: 3rem
+        height: 1rem
+        background: $color-main
+        display: inline-block
+        vertical-align: middle
+        margin-right: 1rem
+.screen-fixed
+    overflow: hidden
