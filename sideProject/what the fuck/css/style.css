@@ -93,6 +93,10 @@ a:hover {
   margin-right: 1rem;
 }
 
+.screen-fixed {
+  overflow: hidden;
+}
+
 @keyframes circle_rotate {
   0% {
     transform: rotate(0);
@@ -739,6 +743,9 @@ h3.fade {
 #home__carousel .splide__pagination {
   display: none;
 }
+#home__carousel .splide__arrow {
+  display: none;
+}
 
 .splide__slide img {
   width: 100%;
@@ -816,6 +823,12 @@ h3.fade {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  #menu {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
 #menu:hover {
   cursor: pointer;
 }
@@ -840,8 +853,18 @@ h3.fade {
 #nav ul {
   padding: 10rem;
 }
+@media (max-width: 767px) {
+  #nav ul {
+    padding: 20rem 10rem;
+  }
+}
 #nav ul li {
   margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  #nav ul li {
+    margin-bottom: 2.5rem;
+  }
 }
 #nav ul li a {
   font-size: 6rem;
@@ -849,6 +872,11 @@ h3.fade {
   color: #2b2b2b;
   display: flex;
   align-items: center;
+}
+@media (max-width: 767px) {
+  #nav ul li a {
+    font-size: 7.2rem;
+  }
 }
 #nav ul li a::before {
   content: "";

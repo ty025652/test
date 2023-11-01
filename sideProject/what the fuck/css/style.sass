@@ -18,6 +18,9 @@
     display: flex
     align-items: center
     justify-content: center
+    @include sp
+        width: 7.5rem
+        height: 7.5rem
     &:hover
         cursor: pointer
     span
@@ -38,14 +41,20 @@
 
     ul
         padding: 10rem
+        @include sp
+            padding: 20rem 10rem
         li
             margin-bottom: 1rem
+            @include sp
+                margin-bottom: 2.5rem
             a
                 font-size: 6rem
                 font-family: $main-font
                 color: $color-text
                 display: flex
                 align-items: center
+                @include sp
+                    font-size: 7.2rem
                 &::before
                     content: ''
                     width: 0.5rem
