@@ -1,0 +1,46 @@
+
+@keyframes circle_rotate
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(360deg)
+
+@keyframes text_fade_rl
+    0%
+        opacity: 0
+        transform: translateX(2.5rem)
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+@keyframes text_fade_up
+    0%
+        opacity: 0
+        transform: translateY(2.5rem)
+    100%
+        opacity: 1
+        transform: translateY(0rem)
+
+@for $i from 1 through 40
+    .home__text h1 span
+        &:nth-of-type(#{$i})
+            opacity: 0
+            animation: text_fade_rl 0.5s forwards #{$i*0.05}s
+    .home__text p span
+        &:nth-of-type(#{$i})
+            opacity: 0
+            animation: text_fade_rl 0.5s forwards #{$i*0.125}s
+    .title__sub .fade
+        &:nth-of-type(#{$i})
+            opacity: 0
+            animation: text_fade_rl 0.5s forwards #{$i*0.15}s
+
+.text p.fade
+    opacity: 0
+    animation: text_fade_rl 1.5s forwards 1s
+h3.fade
+    opacity: 0
+    animation: text_fade_up 1.5s forwards
+.foods__container p.fade
+    opacity: 0
+    animation: text_fade_up 1.5s forwards 0.5s
